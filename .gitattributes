@@ -1,2 +1,44 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+</head>
+<body>
+	<div>
+		<form>
+			<fieldset onresize="100">
+				<legend align=center>LogIn</legend>
+				<br>
+				<label>Username :</label>
+				<input type="Text" name="Usr" id="usr">
+				<br><br>
+				<label>Password :</label>
+				<input type="Text" name="Pswd" id="pwd">
+				<br><br>
+				<input type="button" name="lgn" value="LOGIN" onclick="valid()">
+				<input type="reset" name="cancel" value="CANCEL">
+			</fieldset>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function valid()
+		{
+			let un1="yogesh";
+			let pass1='123';
+			let un2=document.getElementById('usr').value;
+			let pass2= document.getElementById('pwd').value;
+			if ((un1==un2)&&(pass1==pass2)) 
+			{
+				open('HomePage.html');
+			}
+            else
+             {
+             	alert("Wrong Credentials");
+             }
+		}
+	</script>
+
+</body>
+</html>
